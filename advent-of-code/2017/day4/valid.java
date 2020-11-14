@@ -26,7 +26,7 @@ public class valid {
   public static void main(String[] args) {
     try {
       valid x = new valid();
-      File myObject = new File("/Users/amitkarunakaran/Desktop/coding/united/advent-of-code/day3/input.txt");
+      File myObject = new File("/Users/amitkarunakaran/Desktop/coding/united/advent-of-code/2017/day3/input.txt");
       Scanner myReader = new Scanner(myObject);
 
       while (myReader.hasNextLine()) {
@@ -34,7 +34,7 @@ public class valid {
         x.validate(data);
       }
 
-      System.out.println("valid" + x.count);
+      System.out.println("valid paraphrases " + x.count);
     } catch (FileNotFoundException e) {
       System.out.println("An error occurred.");
       e.printStackTrace();
