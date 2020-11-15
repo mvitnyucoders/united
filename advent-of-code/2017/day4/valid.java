@@ -58,8 +58,9 @@ public class valid {
         String data = myReader.nextLine();
         x.numberOfPassphrases(data);
       }
-
+      // part 1
       System.out.println("VALID paraphrases " + x.count);
+      // part 2
       System.out.println("TOTAL VALID PASSPHRASES WITH NO ANAGRAMS" + x.counter);
     } catch (FileNotFoundException e) {
       System.out.println("An error occurred.");

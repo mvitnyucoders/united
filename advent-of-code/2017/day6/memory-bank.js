@@ -77,8 +77,10 @@ function cyclesUntilLoopDetected(input) {
 (function() {
   const result = fs.readFileSync('test.txt', 'utf8')
   const input = result.split(" ").map((item) => parseInt(item));
-  // console.log("INPUT", input);
-  // console.log("OUTPUT", countStepsToCatchLoop(input));
+  // part 1
+  console.log("INPUT", input);
+  console.log("OUTPUT", countStepsToCatchLoop(input));
+  // part 2
   console.log("INPUT", input);
   console.log("OUTPUT", cyclesUntilLoopDetected(input));
 })();
