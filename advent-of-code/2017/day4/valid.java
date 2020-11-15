@@ -23,10 +23,30 @@ public class valid {
     return;
   }
 
+  int counter = 0;
+  public void numberOfPassphrases(String input) {
+    String[] words = input.split(" ");
+
+    Set<String> set = new HashSet<String>();
+
+    for (String word: words) {
+      char[] ch = word.toCharArray();
+      Arrays.sort(ch);
+      String sortedWord = Arrays.toString(ch);
+      if (set.contains(sortedWord)) {
+        return;
+      }
+      set.add(sortedWord);
+    }
+    System.out.println("VALID PASSPHRASE" + input);
+    counter++;
+    return;
+  }
+
   public static void main(String[] args) {
     try {
       valid x = new valid();
-      File myObject = new File("/Users/amitkarunakaran/Desktop/coding/united/advent-of-code/2017/day3/input.txt");
+      File myObject = new File("/Users/amitkarunakaran/Desktop/coding/united/advent-of-code/2017/day4/input.txt");
       Scanner myReader = new Scanner(myObject);
 
       while (myReader.hasNextLine()) {
@@ -34,7 +54,13 @@ public class valid {
         x.validate(data);
       }
 
-      System.out.println("valid paraphrases " + x.count);
+      while (myReader.hasNextLine()) {
+        String data = myReader.nextLine();
+        x.numberOfPassphrases(data);
+      }
+
+      System.out.println("VALID paraphrases " + x.count);
+      System.out.println("TOTAL VALID PASSPHRASES WITH NO ANAGRAMS" + x.counter);
     } catch (FileNotFoundException e) {
       System.out.println("An error occurred.");
       e.printStackTrace();
