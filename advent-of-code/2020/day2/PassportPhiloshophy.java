@@ -42,11 +42,7 @@ public class PassportPhiloshophy {
     int minVal = Integer.parseInt(ranges[0]);
     int maxVal = Integer.parseInt(ranges[1]);
 
-    if (testInput.charAt(minVal - 1) == parseCharacter[0] ^ testInput.charAt(maxVal - 1) == parseCharacter[0]) {
-      return true;
-    }
-
-    return false;    
+    return (testInput.charAt(minVal - 1) == parseCharacter[0] ^ testInput.charAt(maxVal - 1) == parseCharacter[0]);
   }
 
 
